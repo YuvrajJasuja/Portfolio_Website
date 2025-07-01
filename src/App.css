@@ -239,3 +239,42 @@ p{
 #about button:hover {
   background-color: gold;
 }
+
+/*mobile screen*/
+/* Mobile Screens */
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  #main-content {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+}
