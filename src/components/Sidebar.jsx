@@ -1,7 +1,7 @@
  function Sidebar(){
     return(
  <aside id="sidebar">
-        <img src="/mplogo.png" className="profile-img" alt="profile" />
+        <img src="/mplogo.jpg" className="profile-img" alt="profile" />
         <h1>Yuvraj Jasuja</h1>
         <p className="role">Software Developer</p>
 

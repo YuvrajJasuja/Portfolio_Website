@@ -5,13 +5,15 @@ import About from './components/About';
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-
+import ParticlesBackground from 'react-tsparticles';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
+     
     <div id="container">
       <Sidebar />
+      <ParticlesBackground />
       <main id="main-content">
         <Navbar />
         <Routes>
