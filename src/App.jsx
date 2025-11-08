@@ -5,6 +5,7 @@ import About from './components/About';
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import SparkleBackground from './components/sparkleBackground';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
      
     <div id="container">
       <Sidebar />
+      <SparkleBackground />
       <main id="main-content">
         <Navbar />
         <Routes>
