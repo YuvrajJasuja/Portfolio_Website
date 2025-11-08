@@ -20,43 +20,138 @@ body{
     gap:20px;
 }
 
-#sidebar
-{
-width:300px;
-background-color: #1e1e1e;
-padding:30px;
-border-radius: 20px;
-text-align: center;
-box-shadow:0 0 20px rgba(255, 215, 0, 0.5);
+/* -------------------------------------------------
+   BLACK & GOLD SIDEBAR – GOLDEN GLOW + ICONS
+   ------------------------------------------------- */
+
+/* Global reset for box-sizing */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ------------------------------------------------- */
+/* SIDEBAR CONTAINER */
+#sidebar {
+    width: 300px;
+    min-width: 250px;
+    background: #1e1e1e;                     /* deep black */
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 215, 0, .45);
+    position: relative;
+    overflow: hidden;
 }
 
-.profile-img
-{
+/* subtle golden border on the whole card */
+#sidebar::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border: 2px solid transparent;
+    border-radius: 22px;
+    background: linear-gradient(135deg, transparent, rgba(255,215,0,.2));
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ------------------------------------------------- */
+/* PROFILE IMAGE – GOLDEN GLOW */
+.profile-img {
     width: 150px;
-    border-radius: 100px;
-    margin-bottom: 20px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    /* Golden glow + soft inner shadow */
+    box-shadow:
+        0 0 15px rgba(255,215,0,.7),
+        0 0 30px rgba(255,215,0,.4),
+        inset 0 0 8px rgba(0,0,0,.4);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.profile-img:hover {
+    transform: scale(1.06);
+    box-shadow:
+        0 0 25px rgba(255,215,0,.9),
+        0 0 45px rgba(255,215,0,.6),
+        inset 0 0 8px rgba(0,0,0,.4);
 }
 
-.role{
-color:#bbbbbb;
-font-size: 14px;
-margin-bottom:20px;
+/* ------------------------------------------------- */
+/* NAME & ROLE */
+#sidebar h1 {
+    margin: 0 0 8px;
+    font-size: 1.75rem;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255,215,0,.6);
+}
+.role {
+    margin: 0 0 20px;
+    font-size: .9rem;
+    color: #bbbbbb;
 }
 
-.contact-info p{
-    margin: 10px;
-    font-size: 14px;
-    color:#ccc;
+/* ------------------------------------------------- */
+/* CONTACT INFO */
+.contact-info p {
+    margin: 8px 0;
+    font-size: .9rem;
+    color: #ccc;
 }
-.social-links a{
-    margin:0 8px;
-    text-decoration: none;
-    color:#aaa;
-    font-size: 20px;
-    transition:0.5s;
+.contact-info strong {
+    color: #ffd700;               /* golden */
 }
-.social-links a:hover{
-    color:goldenrod;
+
+/* ------------------------------------------------- */
+/* SOCIAL LINKS – ICONS ONLY */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+.social-links a {
+    color: #aaa;
+    font-size: 1.6rem;
+    transition: color .3s ease, transform .3s ease;
+    position: relative;
+}
+.social-links a:hover {
+    color: #ffd700;               /* golden */
+    transform: translateY(-3px);
+}
+
+/* Pulse animation on hover */
+.social-links a::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,215,0,.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.social-links a:hover::after {
+    opacity: 1;
+}
+
+/* ------------------------------------------------- */
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    #sidebar {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .profile-img { width: 120px; height: 120px; }
+}
+@media (max-width: 500px) {
+    #sidebar { padding: 20px; }
+    .profile-img { width: 100px; height: 100px; }
+    .social-links a { font-size: 1.4rem; }
 }
 
 #main-content{

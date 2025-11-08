@@ -6,8 +6,6 @@ function Portfolio() {
     animate={{opacity:1,y:0}}
     transition={{duration:0.6}}
     >
-      <h2>Portfolio</h2>
-      <p>I'm Yuvraj, a passionate developer</p>
       
       <div className="project-grid">
         <div className="project-card">

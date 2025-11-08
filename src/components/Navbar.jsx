@@ -5,7 +5,7 @@ function Navbar() {
     <nav className="nav">
       <Link to="/about">About</Link>
       <Link to="/resume">Resume</Link>
-      <Link to="/portfolio">Portfolio</Link>
+      <Link to="/portfolio">Projects</Link>
       <Link to="/message">Message</Link>
     </nav>
   );
