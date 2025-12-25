@@ -27,7 +27,7 @@ function Sidebar() {
       
       <div className="social-links">
         <a 
-          href="https://www.linkedin.com/in/your-profile" 
+          href="https://www.linkedin.com/in/yuvraj-jasuja-0b2b04318/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="social-link"
@@ -35,7 +35,7 @@ function Sidebar() {
           LinkedIn
         </a>
         <a 
-          href="https://github.com/your-username" 
+          href="https://github.com/Yuvrajjasuja" 
           target="_blank" 
           rel="noopener noreferrer"
           className="social-link"
@@ -43,7 +43,7 @@ function Sidebar() {
           Github
         </a>
         <a 
-          href="https://www.instagram.com/your-username" 
+          href="https://www.instagram.com/yuvrajjasuja/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="social-link"

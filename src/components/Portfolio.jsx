@@ -7,7 +7,9 @@ function Portfolio() {
     transition={{duration:0.6}}
     >
       
-      <div className="project-grid">
+      {
+      <h2>To be updated...</h2>
+      /* <div className="project-grid">
         <div className="project-card">
           <img src="/project1.jpg" className ="project image" alt="Project 1" />
           <div className="project-info">
@@ -31,7 +33,7 @@ function Portfolio() {
             <p>Live weather updates using API</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </motion.section>
   );
 }
